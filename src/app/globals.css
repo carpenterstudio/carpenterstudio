@@ -3,10 +3,14 @@
 @theme {
   --color-primary: #1A1A1A;
   --color-secondary: #F5F5F5;
-  --color-accent: #333333;
+  --color-accent: #2D6A4F;
   --color-background: #FFFFFF;
   --color-muted: #999999;
   --color-apple-blue: #0071e3;
+
+  /* Forest green accent — swap between these two to compare */
+  --color-accent-green-mid: #2D6A4F;   /* rich forest green */
+  --color-accent-green-deep: #1B4332;  /* deep dark forest green */
   --color-apple-dark: #1d1d1f;
   --color-apple-gray: #6e6e73;
   --color-apple-light: #f5f5f7;

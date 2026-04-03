@@ -185,7 +185,7 @@ export default function FeaturedWork() {
         >
           <Link
             href="/portfolio"
-            className="text-sm text-[#0071e3] hover:underline transition-colors"
+            className="text-sm text-[#2D6A4F] hover:underline transition-colors"
           >
             View All Work &rarr;
           </Link>
