@@ -20,7 +20,7 @@ export default function Footer() {
             href="https://www.behance.net/alexcarpenter8"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs uppercase tracking-widest font-medium text-gray-400 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
           >
             Behance
             <ExternalLink size={12} />
@@ -29,7 +29,7 @@ export default function Footer() {
             href="https://www.linkedin.com/in/alexander-carpenter-co/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs uppercase tracking-widest font-medium text-gray-400 hover:text-white transition-colors"
+            className="flex items-center gap-1.5 text-[#6e6e73] hover:text-[#1d1d1f] transition-colors"
           >
             LinkedIn
             <ExternalLink size={12} />
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <p className="text-xs text-gray-500 tracking-wide">
+        <p className="text-xs text-[#6e6e73]">
           &copy; 2026 Alex Carpenter Studio. All Rights Reserved.
         </p>
       </div>

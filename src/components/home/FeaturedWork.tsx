@@ -68,7 +68,7 @@ interface ProjectCardProps {
 function ProjectCard({ project, className = "" }: ProjectCardProps) {
   return (
     <div
-      className={`group bg-white border border-gray-100 hover:shadow-md transition-shadow overflow-hidden ${className}`}
+      className={`group bg-white border border-gray-100 rounded-2xl hover:shadow-md transition-shadow overflow-hidden ${className}`}
     >
       {/* Thumbnail */}
       <div className="aspect-video bg-gray-100 overflow-hidden">
@@ -132,10 +132,10 @@ export default function FeaturedWork() {
           transition={{ duration: 0.5 }}
           className="mb-12"
         >
-          <p className="text-xs uppercase tracking-widest text-gray-400 mb-2">
+          <p className="text-xs uppercase tracking-widest text-[#6e6e73] mb-2">
             Selected Work
           </p>
-          <h2 className="text-2xl font-light text-primary">Recent Projects</h2>
+          <h2 className="text-2xl font-thin text-[#1d1d1f]">Recent Projects</h2>
         </motion.div>
 
         {/* Grid */}
@@ -185,7 +185,7 @@ export default function FeaturedWork() {
         >
           <Link
             href="/portfolio"
-            className="text-xs uppercase tracking-widest text-primary hover:text-gray-500 transition-colors"
+            className="text-sm text-[#0071e3] hover:underline transition-colors"
           >
             View All Work &rarr;
           </Link>

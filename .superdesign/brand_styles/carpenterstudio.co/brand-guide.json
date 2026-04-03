@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "data": {
+    "colors": {
+      "background": "#ffffff",
+      "foreground": "#000000",
+      "primary": "#0000ee",
+      "button": "#222222",
+      "border": "#e8e8e8"
+    },
+    "fonts": [
+      "sans-serif",
+      "arial"
+    ],
+    "logo": null,
+    "screenshot": {
+      "url": "https://pquxfbbxflqvtidtlrhl.supabase.co/storage/v1/object/public/hmac-uploads/brand/8a2c1ec4-3841-40bc-9a5b-5877a88c220c/screenshot.png",
+      "width": 1920,
+      "height": 1080,
+      "sizeBytes": 237820,
+      "uploadedAt": "2026-04-02T20:30:05.469Z"
+    }
+  }
+}

@@ -6,6 +6,10 @@
   --color-accent: #333333;
   --color-background: #FFFFFF;
   --color-muted: #999999;
+  --color-apple-blue: #0071e3;
+  --color-apple-dark: #1d1d1f;
+  --color-apple-gray: #6e6e73;
+  --color-apple-light: #f5f5f7;
 
   --font-sans: var(--font-inter), sans-serif;
 
@@ -25,4 +29,8 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  color: #1d1d1f;
 }

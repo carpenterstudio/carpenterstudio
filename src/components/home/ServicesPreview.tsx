@@ -79,7 +79,7 @@ export default function ServicesPreview() {
             return (
               <motion.div key={service.title} variants={itemVariants}>
                 <div className="mb-4">
-                  <Icon size={22} className="text-primary" strokeWidth={1.5} />
+                  <Icon size={22} className="text-[#0071e3]" strokeWidth={1.5} />
                 </div>
                 <h3 className="text-sm font-medium uppercase tracking-widest text-primary mb-3">
                   {service.title}
@@ -89,7 +89,7 @@ export default function ServicesPreview() {
                 </p>
                 <Link
                   href={service.href}
-                  className="text-xs uppercase tracking-widest text-primary hover:text-gray-500 transition-colors"
+                  className="text-sm text-[#0071e3] hover:underline transition-colors"
                 >
                   View Work &rarr;
                 </Link>

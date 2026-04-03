@@ -40,10 +40,10 @@ export default function PortfolioPage() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Page heading */}
         <div className="mb-12">
-          <p className="text-xs uppercase tracking-widest text-gray-400 mb-2">
+          <p className="text-xs uppercase tracking-widest text-[#6e6e73] mb-2">
             Portfolio
           </p>
-          <h1 className="text-3xl font-light text-primary">All Work</h1>
+          <h1 className="text-3xl font-light text-[#1d1d1f]">All Work</h1>
         </div>
 
         {/* Filter bar */}

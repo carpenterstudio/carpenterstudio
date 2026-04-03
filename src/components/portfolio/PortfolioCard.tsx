@@ -12,7 +12,7 @@ interface PortfolioCardProps {
 
 export default function PortfolioCard({ project }: PortfolioCardProps) {
   return (
-    <article className="group bg-white border border-gray-100 hover:shadow-md transition-shadow overflow-hidden">
+    <article className="group bg-white border border-gray-100 rounded-2xl hover:shadow-md transition-shadow overflow-hidden">
       {/* Thumbnail */}
       <div className="relative aspect-video bg-gray-100 overflow-hidden">
         {project.thumbnail ? (
@@ -25,8 +25,8 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
           <div className="w-full h-full bg-gray-100 group-hover:bg-gray-200 transition-colors duration-300" />
         )}
         {/* Hover overlay */}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-          <span className="text-white text-xs uppercase tracking-widest font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 bg-transparent group-hover:bg-[#0071e3]/90 transition-colors duration-300 flex items-center justify-center">
+          <span className="text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             View Project
           </span>
         </div>

@@ -16,10 +16,10 @@ export default function FilterBar({ active, onChange }: FilterBarProps) {
         <button
           key={filter}
           onClick={() => onChange(filter)}
-          className={`px-4 py-2 text-xs uppercase tracking-widest font-medium transition-colors ${
+          className={`px-4 py-2 text-xs font-medium rounded-full transition-colors ${
             active === filter
-              ? "bg-black text-white"
-              : "border border-gray-300 text-gray-600 hover:border-black hover:text-black"
+              ? "bg-[#0071e3] text-white border border-[#0071e3]"
+              : "border border-gray-300 text-[#1d1d1f] hover:border-[#0071e3] hover:text-[#0071e3]"
           }`}
         >
           {filter}
