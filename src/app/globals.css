@@ -15,6 +15,9 @@
   --color-apple-gray: #6e6e73;
   --color-apple-light: #f5f5f7;
 
+  --gradient-forest: linear-gradient(135deg, #2D6A4F, #1B4332);
+  --gradient-forest-hover: linear-gradient(135deg, #357A5C, #235C43);
+
   --font-sans: var(--font-inter), sans-serif;
 
   --animate-fade-in: fade-in 0.5s ease-out;

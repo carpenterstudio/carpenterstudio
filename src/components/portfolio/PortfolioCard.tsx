@@ -25,7 +25,7 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
           <div className="w-full h-full bg-gray-100 group-hover:bg-gray-200 transition-colors duration-300" />
         )}
         {/* Hover overlay */}
-        <div className="absolute inset-0 bg-transparent group-hover:bg-[#2D6A4F]/90 transition-colors duration-300 flex items-center justify-center">
+        <div className="absolute inset-0 bg-transparent group-hover:bg-gradient-to-br group-hover:from-[#2D6A4F]/90 group-hover:to-[#1B4332]/90 transition-all duration-300 flex items-center justify-center">
           <span className="text-white text-xs font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             View Project
           </span>
