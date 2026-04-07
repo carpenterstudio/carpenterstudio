@@ -3,56 +3,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { projects, type Project } from "@/lib/projects";
-
-// Placeholder cards when projects array is empty
-const placeholderProjects: Project[] = [
-  {
-    slug: "placeholder-1",
-    title: "Brand Identity System",
-    client: "Sample Client",
-    category: "graphic-design",
-    year: "2025",
-    thumbnail: "",
-    description: "A comprehensive brand identity system.",
-  },
-  {
-    slug: "placeholder-2",
-    title: "Promotional Video Series",
-    client: "Creative Agency",
-    category: "video",
-    year: "2025",
-    thumbnail: "",
-    description: "A series of promotional videos.",
-  },
-  {
-    slug: "placeholder-3",
-    title: "Portfolio Website",
-    client: "Independent Artist",
-    category: "web-design",
-    year: "2024",
-    thumbnail: "",
-    description: "A minimal portfolio website.",
-  },
-  {
-    slug: "placeholder-4",
-    title: "Event Recap Film",
-    client: "Local Studio",
-    category: "video",
-    year: "2024",
-    thumbnail: "",
-    description: "Event recap short film.",
-  },
-  {
-    slug: "placeholder-5",
-    title: "E-Commerce Redesign",
-    client: "Retail Brand",
-    category: "web-design",
-    year: "2024",
-    thumbnail: "",
-    description: "Full e-commerce redesign.",
-  },
-];
 
 const categoryLabel: Record<string, string> = {
   video: "Video",
@@ -71,12 +23,14 @@ function ProjectCard({ project, className = "" }: ProjectCardProps) {
       className={`group bg-white border border-gray-100 rounded-2xl hover:shadow-md transition-shadow overflow-hidden ${className}`}
     >
       {/* Thumbnail */}
-      <div className="aspect-video bg-gray-100 overflow-hidden">
+      <div className="aspect-video bg-gray-100 overflow-hidden relative">
         {project.thumbnail ? (
-          <img
+          <Image
             src={project.thumbnail}
             alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+            fill
+            className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         ) : (
           <div className="w-full h-full bg-gray-100 group-hover:bg-gray-200 transition-colors duration-300" />
@@ -119,7 +73,9 @@ export default function FeaturedWork() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
-  const displayProjects = projects.length > 0 ? projects : placeholderProjects;
+  const featuredProjects = projects.filter((p) => p.featured);
+  const displayProjects =
+    featuredProjects.length > 0 ? featuredProjects : projects.slice(0, 5);
   const useBento = displayProjects.length >= 5;
 
   return (
