@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://carpenterstudio.co
+
+# Sitemaps
+Sitemap: https://carpenterstudio.co/sitemap.xml

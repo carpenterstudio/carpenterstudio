@@ -11,7 +11,6 @@ const navLinks = [
   { href: "/portfolio", label: "Portfolio" },
   { href: "/about", label: "About" },
   { href: "/testimonials", label: "Testimonials" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -19,19 +18,19 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/70 backdrop-blur-xl saturate-150 border-b border-black/10">
-        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-          {/* Logo */}
+      <header className="fixed top-0 left-0 right-0 z-50 flex justify-center pt-4 px-6 pointer-events-none">
+        <div className="pointer-events-auto w-full max-w-4xl grid grid-cols-3 items-center h-12 pl-8 pr-2 rounded-full bg-white/80 backdrop-blur-xl saturate-150 border border-black/10 shadow-lg shadow-black/5">
+          {/* Logo — left */}
           <Link href="/" className="flex items-center">
             <img
               src="/images/logo/alex-carpenter-studio-vertical-logo-black.svg"
-              className="h-10 w-auto"
+              className="h-7 w-auto"
               alt="Alex Carpenter Studio"
             />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          {/* Desktop nav — center */}
+          <nav className="hidden md:flex items-center justify-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -43,14 +42,26 @@ export default function Header() {
             ))}
           </nav>
 
+          {/* Contact button — right */}
+          <div className="hidden md:flex justify-end">
+            <Link
+              href="/contact"
+              className="text-sm text-white px-4 py-1.5 rounded-full bg-gradient-to-br from-[#2D6A4F] to-[#1B4332] hover:from-[#357A5C] hover:to-[#235C43] transition-all"
+            >
+              Contact
+            </Link>
+          </div>
+
           {/* Mobile hamburger */}
-          <button
-            className="md:hidden p-2 text-gray-600 hover:text-black transition-colors"
-            onClick={() => setMenuOpen(true)}
-            aria-label="Open menu"
-          >
-            <Menu size={20} />
-          </button>
+          <div className="md:hidden flex justify-end col-span-2">
+            <button
+              className="p-1.5 text-gray-600 hover:text-black transition-colors"
+              onClick={() => setMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <Menu size={18} />
+            </button>
+          </div>
         </div>
       </header>
 

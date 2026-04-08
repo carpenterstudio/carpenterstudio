@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { type Project } from "@/lib/projects";
 
 const categoryLabel: Record<string, string> = {
@@ -16,10 +17,12 @@ export default function PortfolioCard({ project }: PortfolioCardProps) {
       {/* Thumbnail */}
       <div className="relative aspect-video bg-gray-100 overflow-hidden">
         {project.thumbnail ? (
-          <img
+          <Image
             src={project.thumbnail}
-            alt={project.title}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            alt={`${project.title} — ${project.client}`}
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
           <div className="w-full h-full bg-gray-100 group-hover:bg-gray-200 transition-colors duration-300" />
